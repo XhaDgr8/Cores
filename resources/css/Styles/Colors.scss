@@ -1,0 +1,94 @@
+
+:root
+{
+    // Primary Colours
+    --primary: #8C30F5;
+    --primary-dark: #D6B1FF;
+    --primary-light: #F1E4FF;
+
+    // Secondary Colours
+    --secondary: #2EC5CE;
+    --secondary-dark: #75E3EA;
+    --secondary-light: #D5FAFC;
+
+    // Success Colours
+    --success: #34D399;
+    --success-dark: #059669;
+    --success-light: #D1FAE5;
+
+    // Warning Colours
+    --warning: #FE9A22;
+    --warning-dark: #FFC278;
+    --warning-light: #FFE3C1;
+
+    // Danger Colours
+    --danger: #F22BB2;
+    --danger-dark: #FF72D2;
+    --danger-light: #FFB1E6;
+
+    // Accent Colours
+    --accent-green: #C1E5C0;
+    --accent-blue: #C0DAE5;
+    --accent-peach: #F39F9F;
+    --accent-lightPeach: #FDD9D9;
+    --accent-cyan: #A0DCFF;
+
+    // Shades of Gray
+    --gray-900: #18191F;
+    --gray-800: #474A57;
+    --gray-700: #969BAB;
+    --gray-300: #D9DBE1;
+    --gray-200: #EEEFF4;
+    --gray-100: #F4F5F7;
+}
+
+[data-theme="default"]
+{
+    --bg-color: var(--gray-100);
+}
+
+[data-theme="dark"]
+{
+    --bg-color: var(--gray-800);
+}
+
+[data-theme]
+{
+    background-color: var(--bg-color);
+}
+
+$colors:
+'primary',
+'secondary',
+'success',
+'warning',
+'danger',
+'gray-900',
+'gray-800',
+'gray-700',
+'gray-300',
+'gray-200',
+'gray-100',
+'primary-dark',
+'primary-light',
+'secondary-dark',
+'secondary-light',
+'success-dark',
+'success-light',
+'warning-dark',
+'warning-light',
+'danger-dark',
+'danger-light',
+'accent-green',
+'accent-blue',
+'accent-peach',
+'accent-lightPeach',
+'accent-cyan',
+;
+
+
+@each $color in $colors {
+    .bg-#{$color} {
+        background-color: var(--#{$color});
+    }
+}
